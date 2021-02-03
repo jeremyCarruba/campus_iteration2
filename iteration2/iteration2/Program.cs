@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿
+using System;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace iteration2
 {
@@ -14,24 +11,16 @@ namespace iteration2
         static void Main(string[] args)
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+            Console.WriteLine("Coucou, mode en ligne ? [Y/n]");
+            MainController.Statuses status = MainController.Statuses.OFFLINE;
+            ConsoleKeyInfo userInput = Console.ReadKey();
+            if(userInput.Key == ConsoleKey.Y)
+            {
+                status = MainController.Statuses.ONLINE;
+            }
+            MainController mainController = new MainController(status);
 
-            WebRequest request = WebRequest.Create("https://data.mobilites-m.fr/api/linesNear/json?x=5.728043&y=45.184320&dist=500&details=true");
-
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
-            Console.WriteLine(response.StatusDescription);
-            // Get the stream containing content returned by the server.
-            Stream dataStream = response.GetResponseStream();
-            // Open the stream using a StreamReader for easy access.
-            StreamReader reader = new StreamReader(dataStream);
-            // Read the content.
-            string responseFromServer = reader.ReadToEnd();
-            // Display the content.
-            Console.WriteLine(responseFromServer);
-            // Cleanup the streams and the response.
-            reader.Close();
-            dataStream.Close();
-            response.Close();
+            Console.WriteLine(mainController.GetCloseBuses(new JsonResponse()));
         }
     }
 }

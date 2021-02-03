@@ -5,3 +5,6 @@ C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\
 C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\obj\Debug\iteration2.csproj.CoreCompileInputs.cache
 C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\obj\Debug\iteration2.exe
 C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\obj\Debug\iteration2.pdb
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\obj\Debug\iteration2.csproj.CopyComplete

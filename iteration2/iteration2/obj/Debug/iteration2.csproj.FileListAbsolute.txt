@@ -1,0 +1,7 @@
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\bin\Debug\iteration2.exe.config
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\bin\Debug\iteration2.exe
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\bin\Debug\iteration2.pdb
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\obj\Debug\iteration2.csprojAssemblyReference.cache
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\obj\Debug\iteration2.csproj.CoreCompileInputs.cache
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\obj\Debug\iteration2.exe
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\obj\Debug\iteration2.pdb

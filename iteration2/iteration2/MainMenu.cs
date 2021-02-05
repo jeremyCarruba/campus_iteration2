@@ -46,8 +46,7 @@ namespace iteration2
             Console.WriteLine("Quelle distance de l'école ?");
             int dist = Int32.Parse(Console.ReadLine());
 
-            BusResource askServer = new BusResource(dist);
-            MC.DisplayBusesPretty(askServer);
+            this.MC.DisplayBusesPretty(dist);
         }
     }
 }

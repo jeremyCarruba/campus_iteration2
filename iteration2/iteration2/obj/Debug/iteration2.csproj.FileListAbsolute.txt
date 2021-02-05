@@ -8,3 +8,5 @@ C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\
 C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\obj\Debug\iteration2.csproj.CopyComplete
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\obj\Debug\iteration2.Properties.Resource1.resources
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2\obj\Debug\iteration2.csproj.GenerateResource.cache

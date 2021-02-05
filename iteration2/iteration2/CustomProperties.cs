@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace iteration2
 {
-    public class Properties
+    public class CustomProperties
     {
         public string NUMERO { get; set; }
         public string CODE { get; set; }

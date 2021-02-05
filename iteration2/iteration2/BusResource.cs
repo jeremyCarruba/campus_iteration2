@@ -12,50 +12,26 @@ namespace iteration2
 {
     class BusResource : IBusResource
     {
-        public string Response { get; set; }
-        public string OfflineResponse { get; set; }
-
-        public BusResource(int dist)
+        public IRequestHandler RequestHandler { get; set; }
+        public BusResource(IRequestHandler requestHandler)
         {
-            this.GetResponse(dist);
-            this.OfflineResponse = "Offline Response";
+            this.RequestHandler = requestHandler;
         }
-        public void GetResponse(int dist)
+        public List<Buses> GetBusesNearClassroom(int dist)
         {
-            string finalResponse = "No response";
             string longi = "5.728043";
             string lat = "45.184320";
             string url = "https://data.mobilites-m.fr/api/linesNear/json?x=" + longi + "&y=" + lat + "&dist=" + dist + "&details=true";
-            Console.WriteLine(url);
-            WebRequest request = WebRequest.Create(url);
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
-            if (response.StatusDescription == "OK")
-            {
-                Stream dataStream = response.GetResponseStream();
-                StreamReader reader = new StreamReader(dataStream);
-                finalResponse = reader.ReadToEnd();
-                reader.Close();
-                dataStream.Close();
-                response.Close();
-            }
-
-            this.Response = finalResponse;
-        }
-
-        public List<Buses> TransformResponse()
-        {
-            return JsonConvert.DeserializeObject<List<Buses>>(this.Response);
+            string finalResponse = this.RequestHandler.SendRequest(url);
+            return JsonConvert.DeserializeObject<List<Buses>>(finalResponse);
         }
 
         public Line GetLineDetails(string line)
         {
             string[] splitted = line.Split(':');
-            WebRequest request = WebRequest.Create("http://data.mobilites-m.fr/api/lines/json?types=ligne&codes=" + splitted[0] + "_" + splitted[1]);
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            Stream dataStream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(dataStream);
-            string json = reader.ReadToEnd();
+            string url = "http://data.mobilites-m.fr/api/lines/json?types=ligne&codes=" + splitted[0] + "_" + splitted[1];
+            string json = this.RequestHandler.SendRequest(url);
             return JsonConvert.DeserializeObject<Line>(json);
         }
 

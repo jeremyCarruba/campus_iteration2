@@ -9,11 +9,8 @@ namespace iteration2
 {
     public interface IBusResource
     {
-        string Response { get; set; }
-        string OfflineResponse { get; set; }
-        void GetResponse(int dist);
-        List<Buses> TransformResponse();
-
+        IRequestHandler RequestHandler { get; set; }
+        List<Buses> GetBusesNearClassroom(int dist);
         Line GetLineDetails(string line);
     }
 }

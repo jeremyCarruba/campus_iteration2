@@ -10,6 +10,6 @@ namespace iteration2
     {
         public string type { get; set; }
         public Geometry geometry { get; set; }
-        public Properties properties { get; set; }
+        public CustomProperties properties { get; set; }
     }
 }

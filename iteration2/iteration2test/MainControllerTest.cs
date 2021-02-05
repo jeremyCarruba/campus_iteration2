@@ -12,9 +12,8 @@ namespace iteration2test
         public void TestOnline()
         {
             MainController cont = new MainController(MainController.Statuses.ONLINE);
-            BusResourceTest bs = new BusResourceTest();
 
-            Assert.IsInstanceOfType(bs.TransformResponse(), typeof(List<Buses>));
+            Assert.IsInstanceOfType(cont.BusResource.GetBusesNearClassroom(500), typeof(List<Buses>));
         }
     }
 }

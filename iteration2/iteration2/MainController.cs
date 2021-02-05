@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace iteration2
 {
     public class MainController
     {
         public Statuses Status { get; set; }
+        public IRequestHandler RequestHandler { get; set; }
+        public IBusResource BusResource { get; set; }
 
         public enum Statuses
         {
@@ -19,33 +18,29 @@ namespace iteration2
         public MainController(Statuses status)
         {
             this.Status = status;
-        }
-        public string GetCloseBuses(IBusResource response)
-        {
-            string data;
-            if(this.Status == Statuses.OFFLINE)
+            if(status == Statuses.OFFLINE)
             {
-                 data = response.OfflineResponse;
-            }
-            else
+                this.RequestHandler = new OfflineRequests();
+            } else
             {
-                data = response.Response;
+                this.RequestHandler = new RequestHandler();
             }
-            return data;
+            this.BusResource = new BusResource(this.RequestHandler);
         }
 
-        public void DisplayBusesPretty(IBusResource response)
+
+        public void DisplayBusesPretty(int dist)
         {
-            Console.WriteLine("Les beaux bus");
-            List<Buses> busList = response.TransformResponse();
+            List<Buses> busList = this.BusResource.GetBusesNearClassroom(dist);
             busList.ForEach(bus =>
             {
                 Console.WriteLine("arret: " + bus.name + ", lignes: ");
                 bus.lines.ForEach(line => {
+                    Console.WriteLine("=============*****========");
                     Console.WriteLine(line);
-                    Line lineDeser = response.GetLineDetails(line);
+                    Console.WriteLine("============******========");
+                    Line lineDeser = BusResource.GetLineDetails(line);
                     Console.WriteLine(lineDeser.features[0].properties.LIBELLE);
-
                 });
             });
         }

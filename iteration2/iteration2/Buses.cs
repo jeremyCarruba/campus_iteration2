@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace iteration2
 {
-    class Buses
+    public class Buses
     {
         public string id { get; set; }
         public string name { get; set; }

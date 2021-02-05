@@ -46,10 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IJsonResponse.cs" />
-    <Compile Include="JsonResponse.cs" />
+    <Compile Include="Buses.cs" />
+    <Compile Include="MainMenu.cs" />
+    <Compile Include="Feature.cs" />
+    <Compile Include="Geometry.cs" />
+    <Compile Include="IBusResource.cs" />
+    <Compile Include="BusResource.cs" />
+    <Compile Include="Line.cs" />
     <Compile Include="MainController.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Properties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

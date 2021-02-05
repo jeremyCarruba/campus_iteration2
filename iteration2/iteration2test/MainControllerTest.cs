@@ -1,6 +1,7 @@
 ﻿using iteration2;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 
 namespace iteration2test
 {
@@ -11,9 +12,9 @@ namespace iteration2test
         public void TestOnline()
         {
             MainController cont = new MainController(MainController.Statuses.ONLINE);
-            string target = cont.GetCloseBuses(new JsonResponseTest());
+            BusResourceTest bs = new BusResourceTest();
 
-            Assert.IsTrue((target).Contains("Test Response"));
+            Assert.IsInstanceOfType(bs.TransformResponse(), typeof(List<Buses>));
         }
     }
 }

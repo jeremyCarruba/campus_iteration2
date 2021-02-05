@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace iteration2
 {
-    public interface IJsonResponse
+    public class Geometry
     {
-        string Response { get; set; }
-        string OfflineResponse { get; set; }
-
-        void GenerateResponse();
+        public string type { get; set; }
+        public List<List<List<double>>> coordinates { get; set; }
     }
 }

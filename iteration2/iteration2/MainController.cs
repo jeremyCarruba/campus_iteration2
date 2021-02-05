@@ -20,7 +20,7 @@ namespace iteration2
         {
             this.Status = status;
         }
-        public string GetCloseBuses(IJsonResponse response)
+        public string GetCloseBuses(IBusResource response)
         {
             string data;
             if(this.Status == Statuses.OFFLINE)
@@ -32,6 +32,22 @@ namespace iteration2
                 data = response.Response;
             }
             return data;
+        }
+
+        public void DisplayBusesPretty(IBusResource response)
+        {
+            Console.WriteLine("Les beaux bus");
+            List<Buses> busList = response.TransformResponse();
+            busList.ForEach(bus =>
+            {
+                Console.WriteLine("arret: " + bus.name + ", lignes: ");
+                bus.lines.ForEach(line => {
+                    Console.WriteLine(line);
+                    Line lineDeser = response.GetLineDetails(line);
+                    Console.WriteLine(lineDeser.features[0].properties.LIBELLE);
+
+                });
+            });
         }
     }
 }

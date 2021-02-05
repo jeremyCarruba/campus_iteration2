@@ -18,3 +18,5 @@ C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2t
 C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2test\obj\Debug\iteration2test.csproj.CopyComplete
 C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2test\obj\Debug\iteration2test.dll
 C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2test\obj\Debug\iteration2test.pdb
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2test\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\iteration2test\bin\Debug\Newtonsoft.Json.xml

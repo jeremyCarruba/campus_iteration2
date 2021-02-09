@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyLibraryReal;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,12 +28,16 @@ namespace iteration2
                 }
                 this.MC = new MainController(status);
 
-                Console.WriteLine("Tu veux quoi ? [bus/exit]");
+                Console.WriteLine("Tu veux quoi ? [bus/buslines/exit]");
                 string userLineInput = Console.ReadLine();
                 if (userLineInput == "bus")
                 {
                     this.GetBusesFromPoint();
-                } else if (userLineInput == "exit")
+                }else if(userLineInput == "buslines")
+                {
+                    this.GetAll();
+                }
+                else if (userLineInput == "exit")
                 {
                     break;
                 }
@@ -46,7 +51,38 @@ namespace iteration2
             Console.WriteLine("Quelle distance de l'école ?");
             int dist = Int32.Parse(Console.ReadLine());
 
-            this.MC.DisplayBusesPretty(dist);
+            this.DisplayBusesPretty(dist);
+        }
+
+        public void GetAll()
+        {
+            Console.WriteLine("Quelle distance de l'école ?");
+            int dist = Int32.Parse(Console.ReadLine());
+            string longi = "5.728043";
+            string lat = "45.184320";
+
+            List<BusLine> bl = this.MC.BusResource.GetAll(dist, longi, lat);
+            Console.WriteLine(bl);
+        }
+
+        public void DisplayBusesPretty(int dist)
+        {
+            string longi = "5.728043";
+            string lat = "45.184320";
+            List<Buses> busList = this.MC.BusResource.GetBusesNearClassroom(dist, longi, lat);
+            busList.ForEach(bus =>
+            {
+                Console.WriteLine("arret: " + bus.name + ", lignes: ");
+                bus.lines.ForEach(line =>
+                {
+                    Console.WriteLine("=============*****========");
+                    Console.WriteLine(line);
+                    Console.WriteLine("============******========");
+                    Line lineDeser = this.MC.BusResource.GetLineDetails(line);
+                    Console.WriteLine(lineDeser.features[0].properties.LIBELLE);
+                });
+            });
+
         }
     }
 }

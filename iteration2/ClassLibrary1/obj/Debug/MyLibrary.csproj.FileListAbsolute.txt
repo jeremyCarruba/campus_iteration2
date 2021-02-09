@@ -1,0 +1,9 @@
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\ClassLibrary1\obj\Debug\MyLibrary.csprojAssemblyReference.cache
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\ClassLibrary1\obj\Debug\MyLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\ClassLibrary1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\ClassLibrary1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\ClassLibrary1\obj\Debug\MyLibrary.csproj.CopyComplete
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

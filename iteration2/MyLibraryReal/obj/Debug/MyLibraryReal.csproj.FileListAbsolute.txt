@@ -1,0 +1,9 @@
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\MyLibraryReal\obj\Debug\MyLibraryReal.csproj.CoreCompileInputs.cache
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\MyLibraryReal\obj\Debug\MyLibraryReal.csproj.CopyComplete
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\MyLibraryReal\obj\Debug\MyLibraryReal.dll
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\MyLibraryReal\obj\Debug\MyLibraryReal.pdb
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\MyLibraryReal\MyLibraryReal.dll
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\MyLibraryReal\MyLibraryReal.pdb
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\MyLibraryReal\Newtonsoft.Json.dll
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\MyLibraryReal\Newtonsoft.Json.xml
+C:\Users\Jérémy\Documents\Development\campus_iteration2\iteration2\MyLibraryReal\obj\Debug\MyLibraryReal.csprojAssemblyReference.cache
